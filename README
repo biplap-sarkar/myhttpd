@@ -1,0 +1,44 @@
+myhttpd version 1.0.0-50097584
+by Biplap Sarkar (Person No. 50097584, Email:- biplapsa@buffalo.edu)
+
+To make installation process easier and cross compatible,this installation 
+package has been created using GNU autoconf version 2.69
+and GNU automake version 1.11.6
+
+*) Installation Instructions:-
+	After unzipping the tar.gz, 'make' and 'make install' should work
+as a Makefile is already included.
+	If it does not, following steps should be followed:-
+1.) In the base directory of the application, use './configure' to 
+configure the installation.eg
+<myhttpd>/$ ./configure
+
+2.) Use 'make' to compile the application. An executable named 'myhttpd'
+will be created in the application directory.eg
+<myhttpd>/$ make
+
+3.) Use 'make install' to install the application (Needs root priviledge).eg
+<myhttpd>/# make install
+
+
+*) Removing the object and executable files:-
+	The executable and object files can be removed using 'make clean'. eg
+<myhttpd>/$ make clean
+
+*) Uninstalling the application:-
+	The application can be uninstalled using 'make uninstall'. (Needs root priviledge). eg
+<myhttpd>/# make uninstall
+
+*) Application usage
+	<myhttpd>/$ ./myhttpd [−d] [−h] [−l file] [−p port] [−r dir] [−t time] [−n threadnum] [−s sched]
+	Arguments:
+	−d : Enter debugging mode.
+	−h : Print a usage summary with all options and exit.
+	−l file : Log all requests to the given file. Default is log.txt in application root directory.
+	−p port : Listen on the given port. Default is 8080
+	−r dir : Set the root directory for the http server to dir. Default is current execution directory.
+	−t time : Set the queuing time to time seconds. Default is 60 seconds.
+	−n threadnum : Set number of threads waiting ready in the execution thread pool to threadnum.Default is 4.
+	−s sched : Set the scheduling policy. It can be either FCFS or SJF. Default is FCFS.
+
+	Here, <myhttpd> refers to base directory of the source code of the application.
